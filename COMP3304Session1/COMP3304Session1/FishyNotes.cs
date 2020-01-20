@@ -13,20 +13,20 @@ namespace COMP3304Session1
     public partial class FishyNotes : Form
     {
         //Declairing a Form, call it'_newNote', which will store an instance for a note
-        Form _newNote;
+        List <Form> _newNote = new List<Form>();
 
         public FishyNotes()
         {
             InitializeComponent();
         }
 
+
         private void AddNote_Click(object sender, EventArgs e)
         {
-            if(_newNote == null)
-            {
-                _newNote = new FishyNote.FishyNote();
-                _newNote.Show();
-            }
+            //Adding the FishNote to the list
+            _newNote.Add(new FishyNote.FishyNote());
+            //Showing the last element created
+            _newNote.Last().Show();
         }
     }
 }

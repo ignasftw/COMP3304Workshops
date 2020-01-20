@@ -35,13 +35,15 @@
             // 
             // EnterText
             // 
-            this.EnterText.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EnterText.Location = new System.Drawing.Point(0, 106);
+            this.EnterText.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EnterText.Location = new System.Drawing.Point(0, 104);
+            this.EnterText.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
             this.EnterText.Multiline = true;
             this.EnterText.Name = "EnterText";
-            this.EnterText.Size = new System.Drawing.Size(800, 332);
+            this.EnterText.Size = new System.Drawing.Size(800, 327);
             this.EnterText.TabIndex = 0;
             this.EnterText.Text = "Enter your note text here...";
+            this.EnterText.Click += new System.EventHandler(this.EnterText_Click);
             // 
             // DeleteButton
             // 
@@ -77,13 +79,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 431);
             this.ControlBox = false;
             this.Controls.Add(this.CollapseOpenButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.EnterText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FishyNote";
+            this.Padding = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.Text = "FishyNote";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FishyNote_MouseDown_1);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FishyNote_MouseMove_1);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FishyNote_MouseUp_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,6 +101,7 @@
         private System.Windows.Forms.TextBox EnterText;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button CollapseOpenButton;
+
     }
 }
 

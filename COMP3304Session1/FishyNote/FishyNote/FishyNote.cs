@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP3304Session1
+namespace FishyNote
 {
-    public partial class Form1 : Form
+    public partial class FishyNote : Form
     {
-        public Form1()
+        public FishyNote()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

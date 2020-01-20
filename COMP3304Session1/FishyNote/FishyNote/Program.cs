@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace COMP3304Session1
+namespace FishyNote
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace COMP3304Session1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FishyNotes());
+            Application.Run(new FishyNote());
         }
     }
 }
